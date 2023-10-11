@@ -1,0 +1,79 @@
+1) disable newsletter popup => codazon->setting->theme->general->newsletterpoup
+
+2) /home/mage2apol/public_html/app/design/frontend/Codazon/fastestpro/sneakers/Magento_Catalog/templates/product/list/list-styles
+
+3) added small logo
+
+mysqldump -u mage2apol_MXm -p mage2apol_apollo_2023 > mage2apol_apollo_aug_21.sql
+mysql -u root -p howard_live < database_backup_aug_15.sql
+
+------------------customer------------------------------------------
+mysqldump -u howardso_m2 -p howardso_m2_delta customer_entity_datetime customer_entity_decimal customer_entity_int customer_entity_text customer_entity_varchar customer_form_attribute customer_grid_flat customer_group customer_log customer_visitor > customer_tables.sql
+
+mysqldump -u howardso_m2 -p howardso_m2_delta customer_entity > customer_entity.sql
+Ozidigital2021
+
+mysqldump -u howardso_m2 -p howardso_m2_delta customer_address_entity_datetime customer_address_entity_decimal customer_address_entity_int customer_address_entity_text customer_address_entity_varchar customer_eav_attribute customer_eav_attribute_website > customer_address_tables.sql
+mysqldump -u howardso_m2 -p howardso_m2_delta customer_address_entity  > customer_address_entity.sql
+
+mysql -u howardso_m2 -p howardso_m2_delta < customer_entity.sql && mysql -u howardso_m2 -p howardso_m2_delta < customer_tables.sql && mysql -u howardso_m2 -p howardso_m2_delta < customer_address_entity.sql && mysql -u howardso_m2 -p howardso_m2_delta < customer_address_tables.sql
+
+------------orders----------------------------------------------------------------------------------------------------------------------
+
+mysqldump -u howardso_m2 -p howardso_m2_delta sales_order_address sales_order_aggregated_created sales_order_aggregated_updated sales_order_grid sales_order_item sales_order_payment sales_order_status sales_order_status_history sales_order_status_label sales_order_status_state sales_order_tax sales_order_tax_item > sales_order_tables.sql && mysqldump -u howardso_m2 -p howardso_m2_delta sales_order > sales_order.sql
+
+mysql -u howardso_m2 -p howardso_m2_delta < sales_order.sql && mysql -u howardso_m2 -p howardso_m2_delta < sales_order_tables.sql
+
+------------invoice----------------------------------------------------------------------------------------------------------------------
+
+mysqldump -u howardso_m2 -p howardso_m2_delta sales_invoice_comment sales_invoice_grid sales_invoice_item sales_invoiced_aggregated sales_invoiced_aggregated_order > sales_tables.sql && mysqldump -u howardso_m2 -p howardso_m2_delta sales_invoice > sales_invoice.sql
+
+mysql -u howardso_m2 -p howardso_m2_delta < sales_invoice.sql && mysql -u howardso_m2 -p howardso_m2_delta < sales_tables.sql
+Ozidigital2021
+
+------------shipment----------------------------------------------------------------------------------------------------------------------
+
+mysqldump -u howardso_m2 -p howardso_m2_delta sales_shipment_comment sales_shipment_grid sales_shipment_item sales_shipment_track > shipment_tables.sql && mysqldump -u howardso_m2 -p howardso_m2_delta sales_shipment > sales_shiment.sql
+
+mysql -u howardso_m2 -p howardso_m2_delta < sales_shiment.sql && mysql -u howardso_m2 -p howardso_m2_delta < shipment_tables.sql
+
+Ozidigital2021
+
+------------creditmemo----------------------------------------------------------------------------------------------------------------------
+
+mysqldump -u howardso_m2 -p howardso_m2_delta sales_creditmemo sales_creditmemo_grid sales_creditmemo_item sales_creditmemo_comment > creditmemo_backup.sql
+
+mysql -u howardso_m2 -p howardso_m2_delta < creditmemo_backup.sql
+
+Ozidigital2021
+
+
+------------newsletter----------------------------------------------------------------------------------------------------------------------
+
+mysqldump -u howardso_m2 -p howardso_m2_delta newsletter_subscriber > newsletter_subscriber.sql
+
+mysql -u howardso_m2 -p howardso_m2_delta < newsletter_subscriber.sql
+
+Ozidigital2021
+
+----------------customer ---------------------------------------------------------------------------------------------------------------------
+
+remove password_created_at column
+and remove all the invalid customer email and last name is not defined
+
+https://docs.google.com/spreadsheets/d/1sirhQalhJl3Dm1_y43U3EHOH8J548Vkd1GgqrCMuLgk/edit#gid=0
+
+
+
+
+
+
+-------------------- product  --------------------------------------------------------------------------------------------------------------------
+
+https://docs.google.com/spreadsheets/d/19rC-ABoyFnrfax-znnX2h9QlFS59lQCWKN_u5-oBWIk/edit?usp=sharing
+
+https://docs.google.com/spreadsheets/d/1ptsdrjvwmLkngIIi25ni-Ceqd--A3VIVn6083J7iiBI/edit#gid=876778745
+	
+https://docs.google.com/spreadsheets/d/1pIv-Qvp-xXG6emFCXp1rx5tYwoPVBlDIEZe58t_Rp0Y/edit#gid=1759910779
+
+https://docs.google.com/spreadsheets/d/1ptsdrjvwmLkngIIi25ni-Ceqd--A3VIVn6083J7iiBI/edit#gid=282032147
